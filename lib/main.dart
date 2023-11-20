@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_example/curriculo.dart';
+import 'package:portfolio_example/localizacao.dart';
 import 'package:portfolio_example/projetos.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Meu Portfólio',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.brown,
         fontFamily: 'Raleway',
       ),
       home: HomeScreen(),
@@ -24,10 +24,10 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   final List<Map<String, dynamic>> languages = [
-    {'name': 'Flutter', 'photo': 'assets/flutter.jpeg'},
-    {'name': 'JS', 'photo': 'assets/js.png'},
-    {'name': 'PHP', 'photo': 'assets/php.png'},
-    {'name': 'Java', 'photo': 'assets/java.png'},
+    {'name': 'Tratamento facial', 'photo': 'assets/tramento_facial.webp'},
+    {'name': 'Tratamento corporal', 'photo': 'assets/tratamento_corporal.png'},
+    {'name': 'Tratamento capilar', 'photo': 'assets/tratamento_capilar.avif'},
+    {'name': 'Manicure e pedicure', 'photo': 'assets/manicure_pedicure.webp'},
   ];
 
   @override
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
           AnimatedTextKit(
             animatedTexts: [
               TypewriterAnimatedText(
-                'Hello world!',
+                'Seja bem vindo!',
                 textStyle: const TextStyle(
                     fontSize: 32.0,
                     fontWeight: FontWeight.bold,
@@ -68,11 +68,11 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: AnimatedTextKit(
                   animatedTexts: [
-                    RotateAnimatedText('SEJA',
+                    RotateAnimatedText('Centro',
                         textStyle: TextStyle(color: Colors.black54)),
-                    RotateAnimatedText('BEM',
+                    RotateAnimatedText('de estética',
                         textStyle: TextStyle(color: Colors.black54)),
-                    RotateAnimatedText('VINDO',
+                    RotateAnimatedText('Ça va!',
                         textStyle: TextStyle(color: Colors.black54)),
                   ],
                   pause: const Duration(milliseconds: 0),
@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16),
             child: Text(
-              'Bem-vindo ao meu portfólio Flutter! Aqui você pode encontrar informações sobre meus projetos e minha jornada no mundo do desenvolvimento.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut molestie facilisis ligula, in imperdiet ipsum aliquet non. Nullam non tellus sit amet neque finibus gravida. Quisque non neque et lacus lacinia facilisis quis volutpat lectus. Suspendisse luctus quam accumsan, aliquet leo eu, vulputate eros. Phasellus sed augue et velit bibendum feugiat vel vitae mauris. Sed semper augue scelerisque sagittis sagittis. Morbi varius viverra viverra.',
+              'Quem somos?\n\nSomos uma renomad clínica de estética dedicada a proporcionar serviços de alta qualidade para melhorar a beleza, autoestima e bem-estar de nossos clientes. Fundada com a missão de ajudar as pessoas a se sentirem melhor, nossa clínica oferece vários tratamentos e procedimentos estéticos personalizados para atender às necessidades de cada cliente.',
               style: TextStyle(
                 fontSize: 16,
               ),
@@ -181,7 +181,7 @@ class HomeScreen extends StatelessWidget {
               color: Colors.blueGrey,
             ),
             title: Text(
-              'Currículo',
+              'Localização',
               style: TextStyle(fontSize: 18),
             ),
             onTap: () {
