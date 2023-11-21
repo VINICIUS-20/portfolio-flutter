@@ -59,7 +59,7 @@ class ProjectDetailsScreen extends StatelessWidget {
                             Container(
                                 height: 50,
                                 decoration: BoxDecoration(
-                                  color: Colors.grey,
+                                  color: Colors.brown,
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(16),
                                     topRight: Radius.circular(16),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_example/projeto_model.dart';
-
 import 'projeto_detalhe.dart';
 
 class ProjectsScreen extends StatelessWidget {
@@ -43,6 +42,7 @@ class ProjectsScreen extends StatelessWidget {
                   ),
                 );
               },
+              
               child: ListTile(
                 contentPadding: EdgeInsets.all(16),
                 title: Row(
@@ -71,7 +71,7 @@ class ProjectsScreen extends StatelessWidget {
                           SizedBox(height: 8),
                           Text(
                             projects[index].githubLink,
-                            style: TextStyle(color: Colors.black54),
+                            style: TextStyle(color: Colors.brown),
                           ),
                         ],
                       ),

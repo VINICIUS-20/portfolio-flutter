@@ -14,14 +14,14 @@ class ResumePage extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                colors: [Colors.white24, Colors.blueGrey.shade200])),
+                colors: [Colors.brown.shade100, Colors.brown.shade300])),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(
-                'Experiência Profissional',
+                'Centro de Estética Ça Va',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -29,12 +29,13 @@ class ResumePage extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                  'Desenvolvedora Flutter\nEmpresa TEOREMA SISTEMAS\n Abril 2018 - Presente\n'),
+                  'R. Cel. Luís Lustosa, 1736 - Batel, Guarapuava - PR, 85015-340'),
               SizedBox(height: 10),
               Text(
-                  'Analista de Suporte\nEmpresa RP INFO\nJunho 2017 - Janeiro 2018\n'),
+                  'http://www.sistemafiep.org.br/'),
+              SizedBox(height: 10),
               Text(
-                  'Analista Financeira / Suporte de Hardware\nEmpresa Benderplast LTDA\nAgosto 2013 - Maio 2017\n'),
+                  'Telefone: (042) 3621 - 3800'),
               SizedBox(height: 20),
               Row(
                 children: <Widget>[
@@ -61,25 +62,6 @@ class ResumePage extends StatelessWidget {
                   ),
                 ],
               ),
-              Text(
-                'Educação',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                'Pós Graduação Desenvolvimento de Aplicações Web e Mobile\nFaculdade Guairacá\n2019 - 2021',
-              ),
-              SizedBox(height: 10),
-              Text(
-                'Graduação Análise e Desenvolvimento de Sistemas\nFaculdade Guairacá\n2015 - 2017',
-              ),
-              SizedBox(height: 10),
-              Text(
-                'Técnico em Informática\nEnsino Médio\n2010 - 2014',
-              ),
               SfMaps(
                 layers: [
                   MapTileLayer(
@@ -87,16 +69,16 @@ class ResumePage extends StatelessWidget {
                         'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                     initialZoomLevel: 15,
                     initialFocalLatLng:
-                        MapLatLng(-25.395218949348532, -51.478980691614815),
+                        MapLatLng(-25.38973731995469, -51.47881887989549),
                     initialMarkersCount: 1,
                     markerBuilder: (BuildContext context, int index) {
                       return MapMarker(
-                        latitude: -25.395218949348532,
-                        longitude: -51.478980691614815,
+                        latitude: -25.38973731995469,
+                        longitude: -51.47881887989549,
                         iconColor: Colors.red,
                         iconStrokeColor: Colors.red,
                         iconStrokeWidth: 10.0,
-                        iconType: MapIconType.triangle,
+                        iconType: MapIconType.circle,
                       );
                     },
                   ),
