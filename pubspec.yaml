@@ -55,7 +55,13 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-   - assets/photo.jpeg
+   - assets/designer_de_unhas.jpg
+   - assets/peeling_de_diamante.jpg
+   - assets/massagem.jpg
+   - assets/peeling_de_diamante.jpg
+   - assets/criolipolise.jpg
+   - assets/botox.png
+   - assets/centro_de_estetica.jpg
    - assets/contador_de_pessoas.png
    - assets/maioridade.png
    - assets/media.png
