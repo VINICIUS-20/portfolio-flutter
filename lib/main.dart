@@ -33,95 +33,99 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Nosso Portfólio'),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 16),
-            AnimatedTextKit(
-              animatedTexts: [
-                TypewriterAnimatedText(
-                  'Seja bem vindo!',
-                  textStyle: const TextStyle(
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'RobotoMono',
-                      color: Colors.black54),
-                  speed: const Duration(milliseconds: 100),
-                ),
-              ],
-              repeatForever: true,
-              pause: const Duration(milliseconds: 20),
-              displayFullTextOnTap: true,
-              stopPauseOnTap: true,
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                const SizedBox(width: 20.0, height: 100.0),
-                DefaultTextStyle(
-                  style: const TextStyle(
-                    fontSize: 30.0,
-                    fontFamily: 'Montserrat',
-                  ),
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      RotateAnimatedText(
-                        'Centro',
-                        textStyle: TextStyle(color: Colors.black54),
-                      ),
-                      RotateAnimatedText(
-                        'de estética',
-                        textStyle: TextStyle(color: Colors.black54),
-                      ),
-                      RotateAnimatedText(
-                        'Ça va!',
-                        textStyle: TextStyle(color: Colors.black54),
-                      ),
-                    ],
-                    pause: const Duration(milliseconds: 0),
-                    repeatForever: true,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                'Quem somos?\n\nSomos uma renomad clínica de estética dedicada a proporcionar serviços de alta qualidade para melhorar a beleza, autoestima e bem-estar de nossos clientes. Fundada com a missão de ajudar as pessoas a se sentirem melhor, nossa clínica oferece vários tratamentos e procedimentos estéticos personalizados para atender às necessidades de cada cliente.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-            ),
-            SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: languages.map((language) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: CircleAvatar(
-                      radius: 30,
-                      child: CircleAvatar(
-                        radius: 28,
-                        backgroundImage: AssetImage(language['photo']),
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),
-            ),
-          ],
+        appBar: AppBar(
+          title: Text('Nosso Portfólio'),
         ),
-      ),
-      drawer: Drawer(
-        child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+        body: Center(
+          child: Column(
+            children: [
+              SizedBox(height: 16),
+              AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    'Seja bem vindo!',
+                    textStyle: const TextStyle(
+                        fontSize: 32.0,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'RobotoMono',
+                        color: Colors.black54),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                ],
+                repeatForever: true,
+                pause: const Duration(milliseconds: 20),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const SizedBox(width: 20.0, height: 100.0),
+                  DefaultTextStyle(
+                    style: const TextStyle(
+                      fontSize: 30.0,
+                      fontFamily: 'Montserrat',
+                    ),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        RotateAnimatedText(
+                          'Centro',
+                          textStyle: TextStyle(color: Colors.black54),
+                        ),
+                        RotateAnimatedText(
+                          'de estética',
+                          textStyle: TextStyle(color: Colors.black54),
+                        ),
+                        RotateAnimatedText(
+                          'Ça va!',
+                          textStyle: TextStyle(color: Colors.black54),
+                        ),
+                      ],
+                      pause: const Duration(milliseconds: 0),
+                      repeatForever: true,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  'Quem somos?\n\nSomos uma renomada clínica de estética dedicada a proporcionar serviços de alta qualidade para melhorar a beleza, autoestima e bem-estar de nossos clientes. Fundada com a missão de ajudar as pessoas a se sentirem melhor, nossa clínica oferece vários tratamentos e procedimentos estéticos personalizados para atender às necessidades de cada cliente.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: languages.map(
+                    (language) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: CircleAvatar(
+                          radius: 30,
+                          child: CircleAvatar(
+                            radius: 28,
+                            backgroundImage: AssetImage(
+                              language['photo'],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ).toList(),
+                ),
+              ),
+            ],
+          ),
+        ),
+        drawer: Drawer(
+            child: ListView(padding: EdgeInsets.zero, children: <Widget>[
           UserAccountsDrawerHeader(
             accountEmail: Text(
               'centrodeesteticaçava@gmail.com',
@@ -150,7 +154,7 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.person,
-              color: Colors.blueGrey,
+              color: Colors.brown,
             ),
             title: Text(
               'Sobre nós',
@@ -166,7 +170,7 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.face_2,
-              color: Colors.blueGrey,
+              color: Colors.brown,
             ),
             title: Text(
               'Tratamentos',
@@ -187,10 +191,10 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.location_on,
-              color: Colors.blueGrey,
+              color: Colors.brown,
             ),
             title: Text(
-              'Localização',
+              'Contato e localização',
               style: TextStyle(fontSize: 18),
             ),
             onTap: () {
@@ -202,8 +206,6 @@ class HomeScreen extends StatelessWidget {
               );
             },
           ),
-        ]),
-      ),
-    );
+        ])));
   }
 }

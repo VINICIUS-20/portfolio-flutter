@@ -11,10 +11,12 @@ class ResumePage extends StatelessWidget {
       body: Ink(
         padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: [Colors.brown.shade100, Colors.brown.shade300])),
+          gradient: LinearGradient(
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+            colors: [Colors.brown.shade100, Colors.brown.shade300],
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
@@ -31,11 +33,9 @@ class ResumePage extends StatelessWidget {
               Text(
                   'R. Cel. Luís Lustosa, 1736 - Batel, Guarapuava - PR, 85015-340'),
               SizedBox(height: 10),
-              Text(
-                  'http://www.sistemafiep.org.br/'),
+              Text('http://www.sistemafiep.org.br/'),
               SizedBox(height: 10),
-              Text(
-                  'Telefone: (042) 3621 - 3800'),
+              Text('Telefone: (042) 3621 - 3800'),
               SizedBox(height: 20),
               Row(
                 children: <Widget>[
