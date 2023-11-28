@@ -27,7 +27,7 @@ class ProjectDetailsScreen extends StatelessWidget {
                     tag: project.image,
                     child: Image.asset(
                       project.image,
-                      height: 600,
+                      height: 300,
                       width: double.infinity,
                       fit: BoxFit.fitHeight,
                     ),

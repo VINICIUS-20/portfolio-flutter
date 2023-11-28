@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:photo_view/photo_view.dart';
+import 'package:pinch_zoom/pinch_zoom.dart';
 import 'package:portfolio_example/localizacao.dart';
 import 'package:portfolio_example/tratamentos.dart';
 
@@ -23,11 +25,11 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  final List<Map<String, dynamic>> languages = [
-    {'name': 'Tratamento facial', 'photo': 'assets/tramento_facial.webp'},
-    {'name': 'Tratamento corporal', 'photo': 'assets/tratamento_corporal.png'},
-    {'name': 'Tratamento capilar', 'photo': 'assets/tratamento_capilar.avif'},
-    {'name': 'Manicure e pedicure', 'photo': 'assets/manicure_pedicure.webp'},
+  final List<Map<String, dynamic>> trataments = [
+    {'photo': 'assets/tramento_facial.webp'},
+    {'photo': 'assets/tratamento_corporal.png'},
+    {'photo': 'assets/tratamento_capilar.avif'},
+    {'photo': 'assets/manicure_pedicure.webp'},
   ];
 
   @override
@@ -103,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: languages.map(
+                  children: trataments.map(
                     (language) {
                       return Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -136,10 +138,24 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             currentAccountPicture: Padding(
-                padding: EdgeInsets.only(bottom: 5),
-                child: CircleAvatar(
-                    backgroundImage:
-                        AssetImage('assets/centro_de_estetica.jpg'))),
+              padding: EdgeInsets.only(bottom: 5),
+              //child: PinchZoom(
+              // child: Image.asset('assets/logo.png'),
+              // maxScale: 2.5,
+              //onZoomStart: () {
+              //  print('Start zooming');
+              // },
+              //onZoomEnd: () {
+              //  print('Stop zooming');
+              //},
+              // ),
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/logo.png'),
+              ),
+              //child: PhotoView(
+              // imageProvider: AssetImage("assests/logo.png"),
+              //),
+            ),
             decoration: const ShapeDecoration(
                 shape: UnderlineInputBorder(
                     borderSide: BorderSide(
@@ -189,23 +205,22 @@ class HomeScreen extends StatelessWidget {
             height: 20,
           ),
           ListTile(
-            leading: Icon(
-              Icons.location_on,
-              color: Colors.brown,
-            ),
-            title: Text(
-              'Contato e localização',
-              style: TextStyle(fontSize: 18),
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ResumePage(),
-                ),
-              );
-            },
-          ),
+              leading: Icon(
+                Icons.location_on,
+                color: Colors.brown,
+              ),
+              title: Text(
+                'Contato e localização',
+                style: TextStyle(fontSize: 18),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResumePage(),
+                  ),
+                );
+              })
         ])));
   }
 }

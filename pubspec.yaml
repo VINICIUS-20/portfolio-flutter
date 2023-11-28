@@ -33,6 +33,8 @@ dependencies:
   url_launcher: ^6.2.1
   flutter_linkify: ^5.0.2
   animated_text_kit: ^4.2.2
+  pinch_zoom: ^2.0.0
+  photo_view: ^0.14.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -63,17 +65,11 @@ flutter:
    - assets/botox.png
    - assets/centro_de_estetica.jpg
    - assets/contador_de_pessoas.png
-   - assets/maioridade.png
-   - assets/media.png
-   - assets/dados.png
-   - assets/crud.png
-   - assets/previsao.png
-   - assets/angular.png
    - assets/tratamento_corporal.png
-   - assets/laravel.png
    - assets/manicure_pedicure.webp
    - assets/tratamento_capilar.avif
    - assets/tramento_facial.webp
+   - assets/logo.png
 
   fonts:
     - family: Raleway
