@@ -49,9 +49,9 @@ class HomeScreen extends StatelessWidget {
                     textStyle: const TextStyle(
                         fontSize: 32.0,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'RobotoMono',
-                        color: Colors.black54),
-                    speed: const Duration(milliseconds: 100),
+                        fontFamily: 'Courier',
+                        color: Colors.black),
+                    speed: const Duration(milliseconds: 150),
                   ),
                 ],
                 repeatForever: true,
@@ -70,18 +70,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: AnimatedTextKit(
                       animatedTexts: [
-                        RotateAnimatedText(
-                          'Centro',
-                          textStyle: TextStyle(color: Colors.black54),
-                        ),
-                        RotateAnimatedText(
-                          'de estética',
-                          textStyle: TextStyle(color: Colors.black54),
-                        ),
-                        RotateAnimatedText(
-                          'Ça va!',
-                          textStyle: TextStyle(color: Colors.black54),
-                        ),
+                        TypewriterAnimatedText(
+                    'Centro de Estética Ça Va',
+                    textStyle: const TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w900,
+                        fontFamily: 'RaleWay',
+                        color: Colors.brown),
+                    speed: const Duration(milliseconds: 100),
+                  ),
                       ],
                       pause: const Duration(milliseconds: 0),
                       repeatForever: true,
@@ -162,7 +159,7 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.brown,
                         width: 4.0,
                         style: BorderStyle.solid)),
-                gradient: LinearGradient(colors: [Colors.brown, Colors.white])),
+                gradient: LinearGradient(colors: [Colors.brown, Colors.brown])),
           ),
           SizedBox(
             height: 20,
@@ -170,7 +167,7 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.person,
-              color: Colors.brown,
+              color: Colors.black,
             ),
             title: Text(
               'Sobre nós',
@@ -186,7 +183,7 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.face_2,
-              color: Colors.brown,
+              color: Colors.black,
             ),
             title: Text(
               'Tratamentos',
@@ -207,7 +204,7 @@ class HomeScreen extends StatelessWidget {
           ListTile(
               leading: Icon(
                 Icons.location_on,
-                color: Colors.brown,
+                color: Colors.black,
               ),
               title: Text(
                 'Contato e localização',
